@@ -34,7 +34,6 @@ def my_prune(exp_tensor, exp_sq_tensor, tensor, j = 1):
     # res_exp_sq = torch.where((exp_tensor.abs()) > j * (exp_tensor.abs()).mean(), exp_sq_tensor, 0)
     # res_exp_sq = torch.where(tensor == 0, 0, res_exp_sq)
 
-    j = 1
     prune_value = exp_tensor.abs().mean() * j
     prune_line = torch.zeros_like(exp_tensor[0])
 
